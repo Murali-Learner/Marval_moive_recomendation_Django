@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>My Practice</title>
+    <link rel="stylesheet" href="{% static '/cssFiles/home.css' %}" />
+  </head>
+  <body>
+    <center><h1 class="header">MoviesList</h1></center>
+    <div class="moviecard" style="text-align: center">
+      {% for story in moviedata %}
+      <p>{{ story.title }}</p>
+      <img src="https://image.tmdb.org/t/p/w500{{ story.backdrop_path }}" />
+      {% endfor %}
+    </div>
+
+    <!-- ==================================================== -->
+
+    <!-- <center><h1 class="header">Latest News</h1></center> -->
+    <!-- 
+    {% for k, v in newsData.items %}
+    <div class="newsCard" style="text-align: center">
+      <h1 class="newstitle">agdfg{sdfsdh{kdfdfdf}}</h1>
+      <p class="newsdesc">g{asgd{v}asgdaf}adgafgh</p>
+      <br />
+    </div>
+    {% endfor %} -->
+  </body>
+</html>
